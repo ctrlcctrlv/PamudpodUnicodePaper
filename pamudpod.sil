@@ -39,7 +39,6 @@ simpletable.init(SILE.documentState.documentClass, {
 \define[command=BH]{\color[color=#000099]{\process}}
 \set[parameter=font.family,value=EB Garamond,makedefault=true]
 \set[parameter=font.size,value=12,makedefault=true]
-\set[parameter=document.parskip,value=1em]
 \define[command=footnote:font]{\font[size=0.9em]{\set[parameter=document.baselineskip,value=0.5ex]\process\par}}
 \font:add-fallback[filename=./OpenBaybayin.otf,family=OpenBaybayin]
 \font:add-fallback[family=Noto Serif CJK JP]
@@ -47,10 +46,10 @@ simpletable.init(SILE.documentState.documentClass, {
 \define[command=mathfourtd]{\td{\font[family=MathJax_Size4]{\process}}}
 \typeset-into[frame=folio]{\begin[size=12pt]{font}\hfill This document was typeset with \SILE.\end{font}}
 \par\center{\font[size=24pt,weight=1000]{Please reclassify the Philippine \em{pamudpod}}}
-\bigskip
+\medskip
 \remove-font-feature[Letters=SmallCaps]
 \center{\font[size=18pt,weight=400]{Fredrick R. Brennan}}
-\bigskip
+\medskip
 "]
 \begin{table}% ㇷ゚𛅦
 %BĒNG HOK LÊ
@@ -68,18 +67,18 @@ simpletable.init(SILE.documentState.documentClass, {
 }
 \end{table}
 \texmode[_="%]
-\bigskip
+\medskip
 \center{\font[size=18pt,weight=400]{14 August 2020}}
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
+\medskip
+\medskip
+\medskip
+\medskip
+\medskip
+\medskip
 \center{\font[size=24pt,weight=400]{\tagl{ᜊ᜴ᜃ᜴ᜇ᜴ᜄ᜴ᜑ᜴ᜎ᜴ᜋ᜴\\
 ᜈ᜴ᜅ᜴ᜉ᜴ᜍ᜴ᜐ᜴ᜆ᜴ᜏ᜴ᜌ᜴}}}
-\bigskip
-\bigskip
+\medskip
+\medskip
 \center{\font[size=24pt]{\font[size=1.6em,filename=./NotoSansTagalog-Bold.ttf]{ᜊ᜴ᜃ᜴ᜇ᜴ᜄ᜴ᜑ᜴ᜎ᜴ᜋ᜴\\
 ᜈ᜴ᜅ᜴ᜉ᜴ᜍ᜴ᜐ᜴ᜆ᜴ᜏ᜴ᜌ᜴}}}
 \nofolios\par\eject
@@ -167,11 +166,11 @@ Even if this were true, it is certainly better to use a symbol originated in the
 
 \define[command=line]{\novbreak\skip[height=5pt]\noindent\hrule[width=450pt,height=0.3pt]\par\novbreak\skip[height=5pt]}
 \define[command=sup]{\raise[height=0.6ex]{\font[size=0.6em]{\process}}}
-\requireSpace[height=80%ph]
+\requireSpace[height=33%ph]
 \line
 \pullquote{Thank you so much Fr. Ferdinand Bajao for taking the time to explain so well Postma's greatest contribution in preserving and keeping alive the rich Mangyan cultural heritage---the extensive documentation of the Mangyan script, and not to mention the over 20,000 \em{ambahan} he documented and [which are] now preserved [in] the Library of Congress in D.C. In fact, the vowel killer which is called \em{pamudpod} in the \em{Surat Mangyan}  is not his invention. [It] was introduced in other writing systems as early as the 17\sup{th} or 18\sup{th} century for the Tagalog Baybayin. It was also used in the 900 \font[features=+c2sc]{AD} Laguna Copperplate Inscription, the oldest Philippine document, which was discovered after Postma introduced the \em{pamudpod}. Even in the Tagbanwa script, a vowel killer was also introduced. Postma believed that the use of the \em{pamudpod} is necessary to keep the script alive and the Mangyans approved this for instruction purposes. Postma did not alter the original script.}
 \line
-\bigskip
+\medskip
 \noindent{}Indeed, a \em{virama} with an awfully similar shape to the \em{pamudpod} can be seen in the mentioned inscription:\footnote{This version \BH{\href[src=http://paulmorrow.ca/lcieng.htm]{via Paul Morrow}}; I colored the backgrounds of two of the glyphs with a combining \em{pamudpod}-shaped \em{virama} yellow.}
 
 \img[src=lci.png,height=20%ph]
@@ -195,27 +194,27 @@ However, due to the fact that some browsers\footnote{*cough* Chrome! *cough*} re
 Consider the sequence:
 
 \center{\font[size=24pt,weight=400]{\tagl{ᜉᜍ᜴ᜃᜒᜅ᜴}}}
-\bigskip
+\medskip
 
 That is: \font[features=+smcp]{Pa Ra Pamudpod Ka Kudlit_I Nga Pamudpod}.
 
 Assuming Unicode 14.0 is out and contains \tagl1{ᜍ} (\font[features=+smcp]{Ra}),\footnote{Since in reality it isn't, I have a whole universe of fun problems involving the \tagl1{ᜍ} in my fonts. See \BH{\href[src=https://raw.githubusercontent.com/ctrlcctrlv/Noto-Sans-Tagalog/master/documentation.pdf]{Noto Sans Tagalog v3 documentation}}, pp. 14--15, for starters\ldots} the scripts are divided thus, with Tagalog in blue and Hanuno'o in red:
 
 \center{\font[size=24pt,weight=400]{\tagl{\color[color=#000099]{ᜉᜍ\color[color=#990000]{\unichar{0x1734}}ᜃᜒᜅ\color[color=#990000]{\unichar{0x1734}}}}}}
-\bigskip
+\medskip
 
 No problem, right? We see that \SILE is handling it fine. Alas, this is mere good fortune; behold Mousepad:
 
-\bigskip
+\medskip
 \center{\img[src=mousepad.png, height=14%ph]}
-\bigskip
+\medskip
 
 OpenType shaping expert Khaled Hosny puts it succinctly: there's no standard way to chop glyphs into HarfBuzz (or whatever shaper) runs, a process known as ``script itemization''.\footnote{Hosny, Khaled. \BH{\href[src=https://github.com/googlefonts/noto-cjk/issues/172#issuecomment-670990351]{Noto CJK Issue \textnumero{}172}}.}
 
 So, even if a font contains the needed OpenType Layout instructions, if the shaper refuses to ever put the glyphs in the same run, these instructions are worthless. Chrome therefore sees the \em{pamudpod} as the start of the run, and tries to be ``helpful'' by inserting a \unichar{0x25CC}, resulting in this derpy output:
 
 \center{\font[size=24pt,weight=400]{\tagl{\color[color=#000099]{ᜉᜍ\color[color=#990000]{\unichar{0x25CC}\unichar{0x1734}}ᜃᜒᜅ\color[color=#990000]{\unichar{0x25CC}\unichar{0x1734}}}}}}
-\bigskip
+\medskip
 
 The result is particularly broken because for some reason the \em{pamudpod} is considered by Unicode as a combining character; this makes little sense for \em{baybayin}, and in my fonts, I don't implement the \em{pamudpod} with anchors and \code{mark}, but rather treat it as a punctuation mark that crosses its left bearing. In other scripts, I understand that the \em{virama} can ligate, and cause other transformations in the shapes of characters; this is not true for either Hanuno'o or \em{baybayin}, where it is static and has no effect on the shapes of the letters before or after it, and its shape does not change depending on where it is, nor does its attachment location.
 
@@ -237,7 +236,7 @@ For clarity, here they are enlarged:
 
 It can be seen that the font I'm using, EB Garamond, displays the two breves quite differently, and it is not an outlier; most fonts do, for example, Libertinus Serif:
 
-\bigskip
+\medskip
 \center{\font[family=Libertinus Serif,size=24pt]{ЙŬ \strong{ЙŬ}}}
 
 It is my opinion that changing the encoding of the \em{pamudpod} at this late date would add considerable confusion to the encoding of \em{baybayin} with no discernible benefit.
