@@ -108,6 +108,12 @@ For his review and helpful comments on an early version of this proposal.
 For his significant help in authoring \S ``On the other encoded Philippine scripts''.
 }
 \\\\
+\noindent Simon Cozens & Caleb Maclennan, \SILE\\
+\font[size=10pt]{
+\define[command=LaTeX]{\begin[family=Latin Modern Roman]{font}L\kern[width=-.3em]\raise[height=0.4ex]{\begin[family=Latin Modern Roman Caps]{font}A\end{font}}\kern[width=-.13em]T\kern[width=-.2em]\lower[height=0.5ex]{E}\kern[width=-.13em]X\end{font}}
+For their help with \SILE, an experimental typesetting engine and alternative to \hbox{\LaTeX}.
+}
+\\\\
 \noindent\em{Disclosure}: This paper came about while I was working on a font project commissioned by Google Inc. on a contract basis, Noto Sans Tagalog. I was offered this contract because of my successful Unicode proposal which led to the pipelining of U+170D, \BH{\href[src=http://www.unicode.org/L2/L2019/19258r-baybayin-ra.pdf]{L2/19-258R}}. I am passionate about the subject and was not paid specifically to write this paper; this paper is not part of my contract.
 \eject\tableofcontents\folios
 \eject\section{Quick summary}
@@ -137,7 +143,7 @@ The \em{pamudpod} is a \em{virama}. \em{Baybayin}, the local name for what The U
 
 So, why another \em{virama}? Well, first of all, it's being used, as I'll demonstrate, but the use of the \em{pamudpod} makes sense and is being enthusiastically adopted by a large portion of the \em{baybayin}-using community; several subject matter experts use it in their work, such as Norman de los Santos and Kristian Kabuay.
 
-As far as I can tell, these are some of the reasons a \em{pamudpod} is preferred is preferred by many over the currently encoded \em{krus kudlit}:
+As far as I can tell, these are some of the reasons a \em{pamudpod} is preferred by many over the currently encoded \em{krus kudlit}:
 \\\\
 \listarea{
 \listitem{A reason to revive \em{baybayin} is to celebrate Filipino culture and the Tagalog language. The Spanish \em{krus kudlit}, however, is a symbol of colonization and Spanish administration of the country. Indeed, the very shape of the \em{krus kudlit} was meant to ``civilize'' the ancient Tagalogs: it is a cross, and this is not an accident; it was meant by its creator to symbolize Christianity. Even Christians, as most Filipinos are,\footnote{Roman Catholics aren't seen as Christian by all denominations, but such squabbles are not the point of this paper.} can find this colonial history problematic. The priest who first used it in 1620, Francisco Lopez, was perhaps unaware that native alternatives existed; or, seeing his chance to introduce a new letter to a ``heathen'' alphabet, chose a cross. The first book he printed with it, the \em{Doctrina Christiana}, was based on the teachings of Cardinal Roberto Bellarmine, one of Galileo's inquisitors.\footnote{Morrow, Paul (2002). \BH{\href[src=http://paulmorrow.ca/bayeng1.htm]{Baybayin---The Ancient Script of the Philippines}}. 14 July 2010 ed.}}
