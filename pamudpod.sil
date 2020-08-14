@@ -36,9 +36,11 @@ simpletable.init(SILE.documentState.documentClass, {
 \define[command=open-double-page]{\eject\noindent\par}
 \define[command=code]{\font[family=Latin Modern Mono]{\process}}
 % \process should be single \href
-\define[command=BH]{\notex{{\color[color=#000099]{\process}}}}
+\define[command=BH]{\color[color=#000099]{\process}}
 \set[parameter=font.family,value=EB Garamond,makedefault=true]
 \set[parameter=font.size,value=12,makedefault=true]
+\set[parameter=document.parskip,value=1em]
+\define[command=footnote:font]{\font[size=0.9em]{\set[parameter=document.baselineskip,value=0.5ex]\process\par}}
 \font:add-fallback[filename=./OpenBaybayin.otf,family=OpenBaybayin]
 \font:add-fallback[family=Noto Serif CJK JP]
 \define[command=SILE]{S\lower[height=0.5ex]{I}L\kern[width=-.2em]\raise[height=0.6ex]{\font[features=+smcp]{e}}}
