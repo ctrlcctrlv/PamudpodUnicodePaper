@@ -233,7 +233,7 @@ For clarity, here they are enlarged:
 
 \center{\font[size=24pt]{ЙŬ \strong{ЙŬ}}}
 
-It can be seen that the font I'm using, EB Garamond, displays the two breves quite differently, and it is not an outlier; most fonts do, for example, Libertinus:
+It can be seen that the font I'm using, EB Garamond, displays the two breves quite differently, and it is not an outlier; most fonts do, for example, Libertinus Serif:
 
 \bigskip
 \center{\font[family=Libertinus Serif,size=24pt]{ЙŬ \strong{ЙŬ}}}
