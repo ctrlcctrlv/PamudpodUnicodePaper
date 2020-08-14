@@ -226,7 +226,7 @@ It's simply not correct to say that the \em{pamudpod} is only used in Hanuno'o\l
 
 The primary reason that I am not requesting a new character be encoded, but rather that U+1734 be repurposed, is that the \em{pamudpod} is already widely used how I describe as of this writing in 2020. Many of the fonts of Norman de los Santos, for example, contain the \em{pamudpod}.\footnote{See full list in \BH{\href[src=http://www.unicode.org/L2/L2019/19258r-baybayin-ra.pdf]{L2/19-258R}}} Many documents are already using U+1734 in \em{baybayin} text.
 
-It is not abnormal for other scripts, even widely used scripts, to share marks, even marks that do not look identical. For example, both Cyrillic and Latin use U+0306, ◌̆, the \font[features=+smcp]{Combining Breve}. We can see it in the example of the letter Й, here encoded as U+0418 U+0306, and in the letter Ŭ, here U+0055 U+0306.
+It is not abnormal for other scripts, even widely used scripts, to share marks, even marks that do not look identical. For example, both Cyrillic and Latin use U+0306, \font[family=Noto Serif]{◌̆}, the \font[features=+smcp]{Combining Breve}. We can see it in the example of the letter Й, here encoded as U+0418 U+0306, and in the letter Ŭ, here U+0055 U+0306.
 
 \requireSpace[height=20%ph]
 
