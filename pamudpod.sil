@@ -1,7 +1,6 @@
 \begin[class=book]{document}
 \define[command=tagl]{\font[size=1.8em,family=Noto Sans Tagalog Regular]{\process}}
 \define[command=tagl1]{\font[filename=./NotoSansTagalog-Regular.ttf]{\process}}
-\script[src=packages/texmode]
 \script[src=packages/image]
 \script[src=doc_packages/requirespace]
 \script{
@@ -13,7 +12,6 @@ simpletable.init(SILE.documentState.documentClass, {
   tdTag = 'td'
 })
 }
-\texmode[_="%]
 \script[src=doc_packages/features]
 \script[src=packages/frametricks]
 \script[src=packages/rotate]
@@ -32,11 +30,12 @@ simpletable.init(SILE.documentState.documentClass, {
 \script[src=packages/color]
 \script[src=packages/rules]
 \language[main=en]
+\define[command=eol]{\hfill\break}
 \define[command=book:chapter:post]{\thinspace\skip}
 \define[command=open-double-page]{\eject\noindent\par}
 \define[command=code]{\font[family=Latin Modern Mono]{\process}}
 % \process should be single \href
-\define[command=BH]{\notex{{\color[color=#000099]{\process}}}}
+\define[command=BH]{\color[color=#000099]{\process}}
 \set[parameter=font.family,value=EB Garamond,makedefault=true]
 \set[parameter=font.size,value=12,makedefault=true]
 \font:add-fallback[filename=./OpenBaybayin.otf,family=OpenBaybayin]
@@ -49,7 +48,6 @@ simpletable.init(SILE.documentState.documentClass, {
 \remove-font-feature[Letters=SmallCaps]
 \center{\font[size=18pt,weight=400]{Fredrick R. Brennan}}
 \bigskip
-"]
 \begin{table}% ㇷ゚𛅦
 %BĒNG HOK LÊ
 \font[size=18pt,weight=400]{
@@ -65,7 +63,6 @@ simpletable.init(SILE.documentState.documentClass, {
 \tr{\mathfourtd{\glue[width=3.9cm]⎝}\td{\font[family=TT2020Base,style=Italic]{copypaste}\font[family=Android Emoji]{📧}\font[family=TT2020Base,style=Italic]{kittens.ph}}\mathfourtd{⎠}}
 }
 \end{table}
-\texmode[_="%]
 \bigskip
 \center{\font[size=18pt,weight=400]{14 August 2020}}
 \bigskip
@@ -74,46 +71,46 @@ simpletable.init(SILE.documentState.documentClass, {
 \bigskip
 \bigskip
 \bigskip
-\center{\font[size=24pt,weight=400]{\tagl{ᜊ᜴ᜃ᜴ᜇ᜴ᜄ᜴ᜑ᜴ᜎ᜴ᜋ᜴\\
+\center{\font[size=24pt,weight=400]{\tagl{ᜊ᜴ᜃ᜴ᜇ᜴ᜄ᜴ᜑ᜴ᜎ᜴ᜋ᜴\eol
 ᜈ᜴ᜅ᜴ᜉ᜴ᜍ᜴ᜐ᜴ᜆ᜴ᜏ᜴ᜌ᜴}}}
 \bigskip
 \bigskip
-\center{\font[size=24pt]{\font[size=1.6em,filename=./NotoSansTagalog-Bold.ttf]{ᜊ᜴ᜃ᜴ᜇ᜴ᜄ᜴ᜑ᜴ᜎ᜴ᜋ᜴\\
+\center{\font[size=24pt]{\font[size=1.6em,filename=./NotoSansTagalog-Bold.ttf]{ᜊ᜴ᜃ᜴ᜇ᜴ᜄ᜴ᜑ᜴ᜎ᜴ᜋ᜴\eol
 ᜈ᜴ᜅ᜴ᜉ᜴ᜍ᜴ᜐ᜴ᜆ᜴ᜏ᜴ᜌ᜴}}}
 \nofolios\par\eject
 \par\center{\font[size=24pt,weight=1000,features=+smcp]{Acknowledgements}}
-\\\\
-\noindent Antoon Postma, Mangyan Cultural Center\\
+\eol\eol
+\noindent Antoon Postma, Mangyan Cultural Center\eol
 \begin[size=10pt]{font}
 For popularizing the Mangyan script and for his efforts in preserving prehispanic Philippine culture which continue to resound today, far beyond Mindoro. \em{In memoriam}.
 \end{font}
-\\\\
-\noindent Dave Crossland, Google Inc.\\
+\eol\eol
+\noindent Dave Crossland, Google Inc.\eol
 \begin[size=10pt]{font}
 For reminding me this issue exists.
 \end{font}
-\\\\
-\noindent Deborah Anderson, University of California @ Berkeley Script Encoding Initiative\\
+\eol\eol
+\noindent Deborah Anderson, University of California @ Berkeley Script Encoding Initiative\eol
 \font[size=10pt]{
 For her tireless review of script proposals by n00bs like me.
 }
-\\\\
-\noindent Roozbeh Pournader, Unicode Consortium\\
+\eol\eol
+\noindent Roozbeh Pournader, Unicode Consortium\eol
 \font[size=10pt]{
 For his review and helpful comments on an early version of this proposal.
 }
-\\\\
-\noindent Norman de los Santos, BHM Publishing Inc.\\
+\eol\eol
+\noindent Norman de los Santos, BHM Publishing Inc.\eol
 \font[size=10pt]{
-For his significant help in authoring \S ``On the other encoded Philippine scripts''.
+For his significant help in authoring § “On the other encoded Philippine scripts”.
 }
-\\\\
-\noindent Simon Cozens & Caleb Maclennan, \SILE\\
+\eol\eol
+\noindent Simon Cozens & Caleb Maclennan, \SILE\eol
 \font[size=10pt]{
 \define[command=LaTeX]{\begin[family=Latin Modern Roman]{font}L\kern[width=-.3em]\raise[height=0.4ex]{\begin[family=Latin Modern Roman Caps]{font}A\end{font}}\kern[width=-.13em]T\kern[width=-.2em]\lower[height=0.5ex]{E}\kern[width=-.13em]X\end{font}}
 For their help with \SILE, an experimental typesetting engine and alternative to \hbox{\LaTeX}.
 }
-\\\\
+\eol\eol
 \noindent\em{Disclosure}: This paper came about while I was working on a font project commissioned by Google Inc. on a contract basis, Noto Sans Tagalog. I was offered this contract because of my successful Unicode proposal which led to the pipelining of U+170D, \BH{\href[src=http://www.unicode.org/L2/L2019/19258r-baybayin-ra.pdf]{L2/19-258R}}. I am passionate about the subject and was not paid specifically to write this paper; this paper is not part of my contract.
 \eject\tableofcontents\folios
 \eject\section{Quick summary}
@@ -121,7 +118,7 @@ If this proposal is accepted, the following change will be made:
 
 • \tagl{◌᜴}, U+1734, \font[features=+smcp]{Hanunoo Sign Pamudpod}, will receive character name alias \font[features=+smcp]{Philippine Pamudpod}, and be moved from the script \code{Hano} to the script \code{Zyyy} to match the Philippine punctuation \tagl1{᜶}, U+1736, the \font[features=+smcp]{Philippine Double Punctuation}.
 
-I also argue that U+1734 should be reclassified as \code{Mc}---Mark, Spacing---but this is not critical for solving the user community's woes.
+I also argue that U+1734 should be reclassified as \code{Mc}—Mark, Spacing—but this is not critical for solving the user community's woes.
 
 \subsection{\font[family=Hack,size=0.8em]{ScriptExtensions.txt}}
 
@@ -139,35 +136,24 @@ I further suggest that the \em{pamudpod} be added to \code{ScriptExtensions.txt}
 
 \subsection{Why a \em{pamudpod} makes sense in \em{baybayin}}
 
-The \em{pamudpod} is a \em{virama}. \em{Baybayin}, the local name for what The Unicode Standard calls the Tagalog script, though, already has a \em{virama} encoded---\tagl{◌᜔}, U+1714, \font[features=+smcp]{Tagalog Sign Virama}, known in Tagalog as the \em{krus kudlit}.
+The \em{pamudpod} is a \em{virama}. \em{Baybayin}, the local name for what The Unicode Standard calls the Tagalog script, though, already has a \em{virama} encoded—\tagl{◌᜔}, U+1714, \font[features=+smcp]{Tagalog Sign Virama}, known in Tagalog as the \em{krus kudlit}.
 
 So, why another \em{virama}? Well, first of all, it's being used, as I'll demonstrate, but the use of the \em{pamudpod} makes sense and is being enthusiastically adopted by a large portion of the \em{baybayin}-using community; several subject matter experts use it in their work, such as Norman de los Santos and Kristian Kabuay.
 
 As far as I can tell, these are some of the reasons a \em{pamudpod} is preferred by many over the currently encoded \em{krus kudlit}:
-\\\\
-\listarea{
-\listitem{A reason to revive \em{baybayin} is to celebrate Filipino culture and the Tagalog language. The Spanish \em{krus kudlit}, however, is a symbol of colonization and Spanish administration of the country. Indeed, the very shape of the \em{krus kudlit} was meant to ``civilize'' the ancient Tagalogs: it is a cross, and this is not an accident; it was meant by its creator to symbolize Christianity. Even Christians, as most Filipinos are,\footnote{Roman Catholics aren't seen as Christian by all denominations, but such squabbles are not the point of this paper.} can find this colonial history problematic. The priest who first used it in 1620, Francisco Lopez, was perhaps unaware that native alternatives existed; or, seeing his chance to introduce a new letter to a ``heathen'' alphabet, chose a cross. The first book he printed with it, the \em{Doctrina Christiana}, was based on the teachings of Cardinal Roberto Bellarmine, one of Galileo's inquisitors.\footnote{Morrow, Paul (2002). \BH{\href[src=http://paulmorrow.ca/bayeng1.htm]{Baybayin---The Ancient Script of the Philippines}}. 14 July 2010 ed.}}
-\listitem{While some fonts attempt to mask the symbolism of the \em{krus kudlit} by rendering it as an X, as \tagl{\font[features=+salt]{◌᜔}}, and some fonts such as \BH{\href[src=https://github.com/ctrlcctrlv/Noto-Sans-Tagalog]{Noto Sans Tagalog v3+}} indeed contain both selectable via OpenType features, in the case of that font, Stylistic Alternates (\code{salt}), it is impossible to convey such a shape reliably in plaintext. Furthermore, Unicode would never encode the X-shaped \em{krus kudlit} as a separate character, as it is so similar in function and semantics to the regular \em{krus kudlit}.}
-\requireSpace[height=25%ph]
-\listitem{The inventor of the \em{krus kudlit} disparaged the \em{baybayin} script (emphasis mine):\footnote{Scott, William Henry (1994). \em{Barangay: Sixteenth-Century Philippine Culture and Society}. Manila: Ateneo de Manila University Press---\BH{\href[src=https://archive.org/details/BarangaySixteenthCenturyPhilippineCultureAndSociety/page/n111/mode/2up]{via Internet Archive}}. Quoting and translating from Spanish an 1895 reprint of L\'{o}pez, Francisco (1621). \em{Libro a naisur\'{a}tan \'{a}min ti bag\'{a}s ti Doctrina Christiana nga nais\'{u}rat iti libro ti Cardenal a agnagan Belarmino} p. LXII.}\\
-\\
-\pullquote{[T]he reason for putting the text of the Doctrina in Tagalog type\ldots{}has been to begin the \em{correction of the said Tagalog script, which, as it is, is so defective and confused} (because of not having any method until now for expressing final consonants---I mean, those without vowels) that the most learned reader has to stop and ponder over many words to decide on the pronunciation which the writer intended.}\\
-This disparagement was enthusiastically repeated by Spanish scholars right up until the end of the Spanish presence in the Philippines.\footnote{Cipriano Marcilla y Mart\'{i}n (1895). \em{Estudio de los antiguos alfabetos filipinos}. Manila---\BH{\href[src=https://archive.org/details/estudiodelosant00martgoog/page/n19/mode/2up]{via Internet Archive}}. pp. 10, 57}
-}
-\listitem{From a mere design perspective, in most common fonts the \em{krus kudlit} is very difficult to distinguish from the regular \em{kudlit}. While in the beginning the cross shape was elongated,\footnote{Ibid. p. 20. ``\tagl1{ᜎ᜔}''} most fonts now render it as a mere plus sign, perhaps partially to combat the aforementioned perceived ills. Consider, if you would, \tagl1{ᜑᜎᜓᜑᜎᜓ} and \tagl1{ᜑᜎ᜔ᜑᜎ᜔}. Which one is the Philippine dessert \em{halo-halo}, and which \em{halhal}, meaning ``prone to laughing for no reason''? Certainly \tagl1{ᜑᜎ᜴ᜑᜎ᜴} is much easier to distinguish in small print.}
-}
+\eol\eol
 
 \subsection{The \em{pamudpod} is, indeed, native}
 
-Some would say that really the \em{pamudpod} is no better as it was ``invented'' by a Dutchman, Antoon Postma, who married into the Mangyan people and studied their language, Hanuno'o, during his life. Indeed, this argument was even tried against Postma's Mangyan Cultural Center\footnote{Postma is now deceased, but he founded the organization in 2000.} by an organization who claimed ``\em{Surat Mangyan} (Hanuno'o) was changed to suit an anthropologist's vision''.\footnote{It seems that the organization who argued it, ``Tsinelas Republic'', recanted their statement; their \BH{\href[src=https://www.facebook.com/Tsinelas-Republic-1431559690477657/]{Facebook page}} no longer links to it, and the \BH{\href[src=http://archive.is/http://www.tsinelasrepublic.com/surat-mangyan-changed-to-suit-anthropologists-version/]{page itself}} returns an error. Internet Archive doesn't have it; all that remains is the \BH{\href[src=https://www.facebook.com/MHCOfficial/posts/thank-you-so-much-fr-ferdinand-bajao-for-taking-the-time-to-explain-so-well-post/1233467780007310/]{Mangyan Cultural Center's response.}}}
+Some would say that really the \em{pamudpod} is no better as it was “invented” by a Dutchman, Antoon Postma, who married into the Mangyan people and studied their language, Hanuno'o, during his life. Indeed, this argument was even tried against Postma's Mangyan Cultural Center\footnote{Postma is now deceased, but he founded the organization in 2000.} by an organization who claimed “\em{Surat Mangyan} (Hanuno'o) was changed to suit an anthropologist's vision”.\footnote{It seems that the organization who argued it, “Tsinelas Republic”, recanted their statement; their \BH{\href[src=https://www.facebook.com/Tsinelas-Republic-1431559690477657/]{Facebook page}} no longer links to it, and the \BH{\href[src=http://archive.is/http://www.tsinelasrepublic.com/surat-mangyan-changed-to-suit-anthropologists-version/]{page itself}} returns an error. Internet Archive doesn't have it; all that remains is the \BH{\href[src=https://www.facebook.com/MHCOfficial/posts/thank-you-so-much-fr-ferdinand-bajao-for-taking-the-time-to-explain-so-well-post/1233467780007310/]{Mangyan Cultural Center's response.}}}
 
-Even if this were true, it is certainly better to use a symbol originated in the independent Philippines which the Mangyan people voluntarily accepted rather than one which was forced upon the Tagalogs by a colonial dictatorship. However, it is not true; as the Mangyan Cultural Center notes\ldots\footnote{Ibid.}
+Even if this were true, it is certainly better to use a symbol originated in the independent Philippines which the Mangyan people voluntarily accepted rather than one which was forced upon the Tagalogs by a colonial dictatorship. However, it is not true; as the Mangyan Cultural Center notes…\footnote{Ibid.}
 
 \define[command=line]{\novbreak\skip[height=5pt]\noindent\hrule[width=450pt,height=0.3pt]\par\novbreak\skip[height=5pt]}
 \define[command=sup]{\raise[height=0.6ex]{\font[size=0.6em]{\process}}}
 \requireSpace[height=80%ph]
 \line
-\pullquote{Thank you so much Fr. Ferdinand Bajao for taking the time to explain so well Postma's greatest contribution in preserving and keeping alive the rich Mangyan cultural heritage---the extensive documentation of the Mangyan script, and not to mention the over 20,000 \em{ambahan} he documented and [which are] now preserved [in] the Library of Congress in D.C. In fact, the vowel killer which is called \em{pamudpod} in the \em{Surat Mangyan}  is not his invention. [It] was introduced in other writing systems as early as the 17\sup{th} or 18\sup{th} century for the Tagalog Baybayin. It was also used in the 900 \font[features=+c2sc]{AD} Laguna Copperplate Inscription, the oldest Philippine document, which was discovered after Postma introduced the \em{pamudpod}. Even in the Tagbanwa script, a vowel killer was also introduced. Postma believed that the use of the \em{pamudpod} is necessary to keep the script alive and the Mangyans approved this for instruction purposes. Postma did not alter the original script.}
+\pullquote{Thank you so much Fr. Ferdinand Bajao for taking the time to explain so well Postma's greatest contribution in preserving and keeping alive the rich Mangyan cultural heritage—the extensive documentation of the Mangyan script, and not to mention the over 20,000 \em{ambahan} he documented and [which are] now preserved [in] the Library of Congress in D.C. In fact, the vowel killer which is called \em{pamudpod} in the \em{Surat Mangyan}  is not his invention. [It] was introduced in other writing systems as early as the 17\sup{th} or 18\sup{th} century for the Tagalog Baybayin. It was also used in the 900 \font[features=+c2sc]{AD} Laguna Copperplate Inscription, the oldest Philippine document, which was discovered after Postma introduced the \em{pamudpod}. Even in the Tagbanwa script, a vowel killer was also introduced. Postma believed that the use of the \em{pamudpod} is necessary to keep the script alive and the Mangyans approved this for instruction purposes. Postma did not alter the original script.}
 \line
 \bigskip
 \noindent{}Indeed, a \em{virama} with an awfully similar shape to the \em{pamudpod} can be seen in the mentioned inscription:\footnote{This version \BH{\href[src=http://paulmorrow.ca/lcieng.htm]{via Paul Morrow}}; I colored the backgrounds of two of the glyphs with a combining \em{pamudpod}-shaped \em{virama} yellow.}
@@ -176,9 +162,9 @@ Even if this were true, it is certainly better to use a symbol originated in the
 
 A quick comparison of Morrow's \BH{\href[src=http://paulmorrow.ca/lcitrans.htm]{Latin transcription of the Laguna Copperplate Inscription}} with the inscription itself shows that the \em{pamudpod} serves the purpose of a \em{virama} here too.
 
-Third party verification of this can be had by referring to \BH{\href[src=http://std.dkuug.dk/JTC1/SC2/WG2/docs/n4266.pdf]{L2/12-125}}.\footnote{Pandey, Anshuman (2012). ``Preliminary Proposal to Encode the Kawi Script''. pp. 1.} That paper recommends the encoding of Later Kawi, the script of the Laguna Copperplate Inscription, and specifically its \em{virama} at U+11D3F.\footnote{This codepoint now contains ◌\kern[width=-0.3em]\raise[height=1.3ex]{\font[family=Unifont Upper]{𑴿}}\kern[width=0.3em] \font[features=+smcp]{Masaram Gondi Vowel Sign Au}.}: \img[src=kawi.png,height=2%ph]\footnote{Ibid. p. 4.}
+Third party verification of this can be had by referring to \BH{\href[src=http://std.dkuug.dk/JTC1/SC2/WG2/docs/n4266.pdf]{L2/12-125}}.\footnote{Pandey, Anshuman (2012). “Preliminary Proposal to Encode the Kawi Script”. pp. 1.} That paper recommends the encoding of Later Kawi, the script of the Laguna Copperplate Inscription, and specifically its \em{virama} at U+11D3F.\footnote{This codepoint now contains ◌\kern[width=-0.3em]\raise[height=1.3ex]{\font[family=Unifont Upper]{𑴿}}\kern[width=0.3em] \font[features=+smcp]{Masaram Gondi Vowel Sign Au}.}: \img[src=kawi.png,height=2%ph]\footnote{Ibid. p. 4.}
 
-Where then did this misunderstanding come from? It is indeed true that Postma introduced the \em{pamudpod} to the Mangyan people as part of his efforts to revitalize the Hanuno'o script. However, always the scholar, Postma was careful to borrow a construct from already existing Philippine scripts---not just simply draw a cross and call it a day.
+Where then did this misunderstanding come from? It is indeed true that Postma introduced the \em{pamudpod} to the Mangyan people as part of his efforts to revitalize the Hanuno'o script. However, always the scholar, Postma was careful to borrow a construct from already existing Philippine scripts—not just simply draw a cross and call it a day.
 
 \subsection{Why the \em{baybayin} community needs, once again, the Consortium's intervention}
 
@@ -188,7 +174,7 @@ I see how this mistake happened, of course. Most other languages, especially tho
 
 And of course, due to systemic bias found in all tech, it's mostly white Europeans and Americans engaging with the Unicode Consortium. And to top it all off, before my last Tagalog proposal, \BH{\href[src=http://www.unicode.org/L2/L2019/19258r-baybayin-ra.pdf]{L2/19-258R}}, a proposal had not been made since Michael Everson's \BH{\href[src=https://www.unicode.org/L2/L1999/n1933.pdf]{L2/99-014}}. Obviously, fewer Filipinos were online then, fewer books were available (especially online), and so on.
 
-However, due to the fact that some browsers\footnote{*cough* Chrome! *cough*} rely on Unicode's script determinations in ways I think are undue,\footnote{\BH{\href[src=https://github.com/googlefonts/noto-cjk/issues/172#issuecomment-670994063]{Perhaps an issue for the legendary Text Shaping Working Group?}}} the urgency is increased as we cannot simply work around the issue with clever OpenType tables. To explain\ldots
+However, due to the fact that some browsers\footnote{*cough* Chrome! *cough*} rely on Unicode's script determinations in ways I think are undue,\footnote{\BH{\href[src=https://github.com/googlefonts/noto-cjk/issues/172#issuecomment-670994063]{Perhaps an issue for the legendary Text Shaping Working Group?}}} the urgency is increased as we cannot simply work around the issue with clever OpenType tables. To explain…
 
 Consider the sequence:
 
@@ -197,7 +183,7 @@ Consider the sequence:
 
 That is: \font[features=+smcp]{Pa Ra Pamudpod Ka Kudlit_I Nga Pamudpod}.
 
-Assuming Unicode 14.0 is out and contains \tagl1{ᜍ} (\font[features=+smcp]{Ra}),\footnote{Since in reality it isn't, I have a whole universe of fun problems involving the \tagl1{ᜍ} in my fonts. See \BH{\href[src=https://raw.githubusercontent.com/ctrlcctrlv/Noto-Sans-Tagalog/master/documentation.pdf]{Noto Sans Tagalog v3 documentation}}, pp. 14--15, for starters\ldots} the scripts are divided thus, with Tagalog in blue and Hanuno'o in red:
+Assuming Unicode 14.0 is out and contains \tagl1{ᜍ} (\font[features=+smcp]{Ra}),\footnote{Since in reality it isn't, I have a whole universe of fun problems involving the \tagl1{ᜍ} in my fonts. See \BH{\href[src=https://raw.githubusercontent.com/ctrlcctrlv/Noto-Sans-Tagalog/master/documentation.pdf]{Noto Sans Tagalog v3 documentation}}, pp. 14--15, for starters…} the scripts are divided thus, with Tagalog in blue and Hanuno'o in red:
 
 \center{\font[size=24pt,weight=400]{\tagl{\color[color=#000099]{ᜉᜍ\color[color=#990000]{\unichar{0x1734}}ᜃᜒᜅ\color[color=#990000]{\unichar{0x1734}}}}}}
 \bigskip
@@ -208,9 +194,9 @@ No problem, right? We see that \SILE is handling it fine. Alas, this is mere goo
 \center{\img[src=mousepad.png, height=14%ph]}
 \bigskip
 
-OpenType shaping expert Khaled Hosny puts it succinctly: there's no standard way to chop glyphs into HarfBuzz (or whatever shaper) runs, a process known as ``script itemization''.\footnote{Hosny, Khaled. \BH{\href[src=https://github.com/googlefonts/noto-cjk/issues/172#issuecomment-670990351]{Noto CJK Issue \textnumero{}172}}.}
+OpenType shaping expert Khaled Hosny puts it succinctly: there's no standard way to chop glyphs into HarfBuzz (or whatever shaper) runs, a process known as “script itemization”.\footnote{Hosny, Khaled. \BH{\href[src=https://github.com/googlefonts/noto-cjk/issues/172#issuecomment-670990351]{Noto CJK Issue №172}}.}
 
-So, even if a font contains the needed OpenType Layout instructions, if the shaper refuses to ever put the glyphs in the same run, these instructions are worthless. Chrome therefore sees the \em{pamudpod} as the start of the run, and tries to be ``helpful'' by inserting a \unichar{0x25CC}, resulting in this derpy output:
+So, even if a font contains the needed OpenType Layout instructions, if the shaper refuses to ever put the glyphs in the same run, these instructions are worthless. Chrome therefore sees the \em{pamudpod} as the start of the run, and tries to be “helpful” by inserting a \unichar{0x25CC}, resulting in this derpy output:
 
 \center{\font[size=24pt,weight=400]{\tagl{\color[color=#000099]{ᜉᜍ\color[color=#990000]{\unichar{0x25CC}\unichar{0x1734}}ᜃᜒᜅ\color[color=#990000]{\unichar{0x25CC}\unichar{0x1734}}}}}}
 \bigskip
@@ -219,7 +205,7 @@ The result is particularly broken because for some reason the \em{pamudpod} is c
 
 Of course, it can be said that application-level bugs are not the Consortium's problem, in which case I fall back on my trusty argument of correctness for why it needs to change! \font[family=Android Emoji]{😉}
 
-It's simply not correct to say that the \em{pamudpod} is only used in Hanuno'o\ldots
+It's simply not correct to say that the \em{pamudpod} is only used in Hanuno'o…
 
 \subsection{Why not a new character?}
 
@@ -243,7 +229,7 @@ It is my opinion that changing the encoding of the \em{pamudpod} at this late da
 \eject\section{Evidence of \em{pamudpod} in use in modern \em{baybayin}}
 Note: Many of these sources are identical to the ones I used for \BH{\href[src=http://www.unicode.org/L2/L2019/19258r-baybayin-ra.pdf]{L2/19-258R}}.
 
-\subsection{Kalem (Anak Bathala), \textnumero{}1, 2013, BHM Publishing, graphic novel}
+\subsection{Kalem (Anak Bathala), №1, 2013, BHM Publishing, graphic novel}
 \em{Pamudpod} are everywhere in this book, including on the cover in the names of the authors:
 
 \img[src=MorilloAfrica.png, height=18ex]
@@ -260,22 +246,22 @@ Tagalog: Hindi ko alam kung bakit tayo narito sa daigdig ng mga tao, kungbakit d
 
 English: I don’t know why we’re here on this Earth of the humans, or why Detinos brought us here. But as long as we’re here, I’ll play around.
 
-\subsection{Kristian Kabuay's \em{Surat Magazine}, \textnumero{}1, December 2018}
+\subsection{Kristian Kabuay's \em{Surat Magazine}, №1, December 2018}
 
-The publication of this magazine was funded \BH{\href[src=https://www.kickstarter.com/projects/baybayin/surat-1st-magazine-using-an-endangered-script-in-5/posts/2342594]{by a Kickstarter}}---and was billed as ``the first of its kind in over 50 years.''\footnote{Kabuay rose $3,136 and further wrote of the magazine: ``The inaugural \em{Surat} (to write) Magazine will be mainly written using indigenous writing systems in the Philippines in multiple languages covering topics from culture, art, poetry, food, fashion, travel, etc.''}
+The publication of this magazine was funded \BH{\href[src=https://www.kickstarter.com/projects/baybayin/surat-1st-magazine-using-an-endangered-script-in-5/posts/2342594]{by a Kickstarter}}—and was billed as “the first of its kind in over 50 years.”\footnote{Kabuay rose $3,136 and further wrote of the magazine: “The inaugural \em{Surat} (to write) Magazine will be mainly written using indigenous writing systems in the Philippines in multiple languages covering topics from culture, art, poetry, food, fashion, travel, etc.”}
 
 The magazine is multilingual, however there is a long section written in the Tagalog \em{baybayin} script which uses a \em{pamudpod} everywhere a \em{virama} is called for. I will transcribe a line found on page 58 just as an example:
 
 \img[src=SURAT_Ef.png, height=15ex]
 
-Transcription: \tagl1{ᜈᜅ᜴ ᜈᜃᜒᜆ ᜀᜅ᜴ ᜋᜄᜈ᜴ᜇᜅ᜔ ᜉᜅᜒᜆᜁᜈ᜴ ᜀᜆ᜴\\
-\noindentᜋᜊᜓᜆᜒᜅ᜴ ᜃᜉᜎᜍᜈ᜴ ᜵ ᜅᜓᜋᜒᜆᜒ ᜐᜒᜌ ᜀᜆ᜴ ᜐᜒᜈᜊᜒ\\
-\noindentᜐ ᜀᜋᜒᜈ᜴ ᜈ ᜁᜐᜅ᜔ ᜀᜍᜏ᜴ ᜀᜆ᜴ ᜊᜊᜎᜒᜃ᜴ ᜂᜎᜒᜆ᜴\\
+Transcription: \tagl1{ᜈᜅ᜴ ᜈᜃᜒᜆ ᜀᜅ᜴ ᜋᜄᜈ᜴ᜇᜅ᜔ ᜉᜅᜒᜆᜁᜈ᜴ ᜀᜆ᜴\eol
+\noindentᜋᜊᜓᜆᜒᜅ᜴ ᜃᜉᜎᜍᜈ᜴ ᜵ ᜅᜓᜋᜒᜆᜒ ᜐᜒᜌ ᜀᜆ᜴ ᜐᜒᜈᜊᜒ\eol
+\noindentᜐ ᜀᜋᜒᜈ᜴ ᜈ ᜁᜐᜅ᜔ ᜀᜍᜏ᜴ ᜀᜆ᜴ ᜊᜊᜎᜒᜃ᜴ ᜂᜎᜒᜆ᜴\eol
 \noindentᜃᜋᜒ ᜐ ᜊᜒᜐ᜴ᜃᜎᜈ᜴ ᜶ ᜀᜆ᜴ ᜐ ᜉᜄ᜴ᜃᜆᜉᜓᜐ᜴}
 
-Tagalog: Nang nakita ang magandang pangitain at mabuting kapalaran, ngumiti siya at sinabi sa amin na isang araw at babalik ulit kami sa Biskalan. At sa pagkatapos\ldots
+Tagalog: Nang nakita ang magandang pangitain at mabuting kapalaran, ngumiti siya at sinabi sa amin na isang araw at babalik ulit kami sa Biskalan. At sa pagkatapos…
 
-English: When she saw a beautiful vision and a good fortune, she smiled and said to us that one day we would again return to Biskalan. After that\ldots
+English: When she saw a beautiful vision and a good fortune, she smiled and said to us that one day we would again return to Biskalan. After that…
 
 \subsection{Wikipedia}
 
@@ -287,29 +273,29 @@ As of \BH{\href[src=https://en.wikipedia.org/w/index.php?title=Baybayin&oldid=97
 \strong{Baybayin} (Tagalog pronunciation: [bai̯ˈba:jɪn], \tagl1{ᜊᜊᜌᜒ}, virama-krus-kudlit: \tagl1{ᜊᜌ᜔ᜊᜌᜒᜈ᜔}, virama-pamudpod: \tagl1{ᜊᜌ᜴ᜊᜌᜒᜈ᜴  }; also known as \strong{alibata}) is an old writing system that was used in the Philippines.
 }
 
-Despite saying this, there is a whole section of examples of \S ``Modern usage'' of the \em{baybayin} script, including on insignia of government agencies and the Philippine passport.
+Despite saying this, there is a whole section of examples of § “Modern usage” of the \em{baybayin} script, including on insignia of government agencies and the Philippine passport.
 
 \eject\subsection{Bohol–Panglao International Airport mural}
 
 The Bohol–Panglao International Airport, inaugurated by President Rodrigo Duterte on November 27, 2018, features a very large mural containing a lot of \em{baybayin} text which makes frequent use of the \em{pamudpod}.
 
-In the photo below, a subsection of the mural is shown, which contains, among other things, a line from the national anthem of the Philippines, \em{Lupang Hinirang}. The photo was rotated and cropped for clarity; it is courtesy of Sami's Colourful World: \url{sami-colourfulworld.blogspot.com}.\footnote{Sami (2019). ``\BH{\href[src=https://sami-colourfulworld.blogspot.com/2019/02/monday-mural-panglao-airport-philippines.html]{Monday Mural - Panglao Airport (Philippines)}}''.}
+In the photo below, a subsection of the mural is shown, which contains, among other things, a line from the national anthem of the Philippines, \em{Lupang Hinirang}. The photo was rotated and cropped for clarity; it is courtesy of Sami's Colourful World: \url{sami-colourfulworld.blogspot.com}.\footnote{Sami (2019). “\BH{\href[src=https://sami-colourfulworld.blogspot.com/2019/02/monday-mural-panglao-airport-philippines.html]{Monday Mural - Panglao Airport (Philippines)}}”.}
 
 \img[src=Airport.png, height=36ex]
 
-Transcription: \tagl1{ᜉᜒᜍ᜴ᜎᜐ᜴ ᜅ᜴ ᜐᜒᜎᜅᜈᜈ᜴\\
-ᜎᜍᜏᜅ᜴ ᜁᜈᜓᜃᜒᜆ᜴ ᜐ ᜃᜑᜓᜌ᜴\\
-ᜁᜐ᜴ᜉᜒᜍᜒᜆᜓ\\
+Transcription: \tagl1{ᜉᜒᜍ᜴ᜎᜐ᜴ ᜅ᜴ ᜐᜒᜎᜅᜈᜈ᜴\eol
+ᜎᜍᜏᜅ᜴ ᜁᜈᜓᜃᜒᜆ᜴ ᜐ ᜃᜑᜓᜌ᜴\eol
+ᜁᜐ᜴ᜉᜒᜍᜒᜆᜓ\eol
 ᜂᜇ᜴ᜈ}
-\\\\
-Tagalog: Perlas ng silanganan\\
-Larawang inukit sa kahoy\\
-Espiritu\\
+\eol\eol
+Tagalog: Perlas ng silanganan\eol
+Larawang inukit sa kahoy\eol
+Espiritu\eol
 Odna
-\\\\
-English: Pearl of the East\footnote{From \em{Lupang Hinirang}.}\\
-Statues carved from wood\\
-Spirit\\
+\eol\eol
+English: Pearl of the East\footnote{From \em{Lupang Hinirang}.}\eol
+Statues carved from wood\eol
+Spirit\eol
 Odna
 \eject\section{On the other encoded Philippine scripts}
 
@@ -321,12 +307,11 @@ Nevertheless, the question was posed in an e-mail thread about this proposal as 
 \pullquote{
 \noindent{}The late Antoon Postma, Hanunuo leaders, and the Mangyan Heritage Center (MHC) tried to introduce the use of the \em{pamudpod} mark among the Buhid but because the tribe/group is inherently aloof and their villages more remote, continued contact and education attempts were not as easy as it was with the Hanunuo.
 
-The University of the Philippines, SIL, Mangyan Mission, and the MHC recently concluded a years long data sampling/gathering and comparative study of Buhid scripts. I was privy to the data/samples from the surveyors and their expert consultant Christopher Ray Miller. Buhid now appears to have two distinct sets of scripts. One for Bansud Buhid, and another for Bongabong-Roxas. Many CV shapes are not shared. More importantly, they do not match many of the corresponding glyph shapes represented in the Buhid Unicode range. I don't remember from whom or where the sample of Buhid Unicode typeface came from, but they are quite erroneous (if not highly stylized). The \em{pamudpod} has not been adopted by the writers. \ldots{}so there's that.
+The University of the Philippines, SIL, Mangyan Mission, and the MHC recently concluded a years long data sampling/gathering and comparative study of Buhid scripts. I was privy to the data/samples from the surveyors and their expert consultant Christopher Ray Miller. Buhid now appears to have two distinct sets of scripts. One for Bansud Buhid, and another for Bongabong-Roxas. Many CV shapes are not shared. More importantly, they do not match many of the corresponding glyph shapes represented in the Buhid Unicode range. I don't remember from whom or where the sample of Buhid Unicode typeface came from, but they are quite erroneous (if not highly stylized). The \em{pamudpod} has not been adopted by the writers. …{}so there's that.
 
-As for Palawan scripts, there are emerging Tagbanwa variants from different Tagbanwa and Palawan tribes. But documentation is sketchy, places are too remote to study, and there is no official organization that is up to the task. We are left with what we already have in Tagbanwa Unicode, which if I recall correctly, came from the book \em{Alfabeto Tagbanwa con Algunas Reformas} (\em{Tagbanwa Alphabet with Some Reforms}) by Norberto Romualdez.  As per Romualdez's reform, he has suggested an x-\em{kudlit} type \em{virama} mark that precedes the final consonant (x before the final consonant if the parent syllable has an /a/ sound, superscripted x before the final consonant if the parent syllable has an /i/ sound, and subscripted x before the final consonant if the parent syllable has an /u/ sound.) \ldots{}there's no evidence that his reforms were ever implemented beyond his book.
+As for Palawan scripts, there are emerging Tagbanwa variants from different Tagbanwa and Palawan tribes. But documentation is sketchy, places are too remote to study, and there is no official organization that is up to the task. We are left with what we already have in Tagbanwa Unicode, which if I recall correctly, came from the book \em{Alfabeto Tagbanwa con Algunas Reformas} (\em{Tagbanwa Alphabet with Some Reforms}) by Norberto Romualdez.  As per Romualdez's reform, he has suggested an x-\em{kudlit} type \em{virama} mark that precedes the final consonant (x before the final consonant if the parent syllable has an /a/ sound, superscripted x before the final consonant if the parent syllable has an /i/ sound, and subscripted x before the final consonant if the parent syllable has an /u/ sound.) …{}there's no evidence that his reforms were ever implemented beyond his book.
 }
 \line
 
 In sum, right now, we only have evidence of the \em{pamudpod} being used in \em{surat Mangyan} and \em{baybayin}. The problems de los Santos mentions regarding the encoding of Buhid are a possible avenue of future work.
-"]
 \end{document}
