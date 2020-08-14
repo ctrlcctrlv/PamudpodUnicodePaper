@@ -1,5 +1,5 @@
 SILE.registerCommand("requireSpace", function (options, content)
-  local required = SILE.length(options.height or 0)
+  local required = SILE.measurement(options.height or 0)
   SILE.typesetter:leaveHmode()
   SILE.call("hbox", {}, content) -- push content we want to fit
   local heightOfPageSoFar = SILE.pagebuilder:collateVboxes(SILE.typesetter.state.outputQueue).height
