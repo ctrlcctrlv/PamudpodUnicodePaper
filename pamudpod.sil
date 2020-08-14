@@ -38,6 +38,7 @@ simpletable.init(SILE.documentState.documentClass, {
 \define[command=BH]{\color[color=#000099]{\process}}
 \set[parameter=font.family,value=EB Garamond,makedefault=true]
 \set[parameter=font.size,value=12,makedefault=true]
+\set[parameter=document.parskip,value=1em]
 \font:add-fallback[filename=./OpenBaybayin.otf,family=OpenBaybayin]
 \font:add-fallback[family=Noto Serif CJK JP]
 \define[command=SILE]{S\lower[height=0.5ex]{I}L\kern[width=-.2em]\raise[height=0.6ex]{\font[features=+smcp]{e}}}
@@ -79,38 +80,38 @@ simpletable.init(SILE.documentState.documentClass, {
 ᜈ᜴ᜅ᜴ᜉ᜴ᜍ᜴ᜐ᜴ᜆ᜴ᜏ᜴ᜌ᜴}}}
 \nofolios\par\eject
 \par\center{\font[size=24pt,weight=1000,features=+smcp]{Acknowledgements}}
-\eol\eol
+
 \noindent Antoon Postma, Mangyan Cultural Center\eol
 \begin[size=10pt]{font}
 For popularizing the Mangyan script and for his efforts in preserving prehispanic Philippine culture which continue to resound today, far beyond Mindoro. \em{In memoriam}.
 \end{font}
-\eol\eol
+
 \noindent Dave Crossland, Google Inc.\eol
 \begin[size=10pt]{font}
 For reminding me this issue exists.
 \end{font}
-\eol\eol
+
 \noindent Deborah Anderson, University of California @ Berkeley Script Encoding Initiative\eol
 \font[size=10pt]{
 For her tireless review of script proposals by n00bs like me.
 }
-\eol\eol
+
 \noindent Roozbeh Pournader, Unicode Consortium\eol
 \font[size=10pt]{
 For his review and helpful comments on an early version of this proposal.
 }
-\eol\eol
+
 \noindent Norman de los Santos, BHM Publishing Inc.\eol
 \font[size=10pt]{
 For his significant help in authoring § “On the other encoded Philippine scripts”.
 }
-\eol\eol
+
 \noindent Simon Cozens & Caleb Maclennan, \SILE\eol
 \font[size=10pt]{
 \define[command=LaTeX]{\begin[family=Latin Modern Roman]{font}L\kern[width=-.3em]\raise[height=0.4ex]{\begin[family=Latin Modern Roman Caps]{font}A\end{font}}\kern[width=-.13em]T\kern[width=-.2em]\lower[height=0.5ex]{E}\kern[width=-.13em]X\end{font}}
 For their help with \SILE, an experimental typesetting engine and alternative to \hbox{\LaTeX}.
 }
-\eol\eol
+
 \noindent\em{Disclosure}: This paper came about while I was working on a font project commissioned by Google Inc. on a contract basis, Noto Sans Tagalog. I was offered this contract because of my successful Unicode proposal which led to the pipelining of U+170D, \BH{\href[src=http://www.unicode.org/L2/L2019/19258r-baybayin-ra.pdf]{L2/19-258R}}. I am passionate about the subject and was not paid specifically to write this paper; this paper is not part of my contract.
 \eject\tableofcontents\folios
 \eject\section{Quick summary}
@@ -141,7 +142,7 @@ The \em{pamudpod} is a \em{virama}. \em{Baybayin}, the local name for what The U
 So, why another \em{virama}? Well, first of all, it's being used, as I'll demonstrate, but the use of the \em{pamudpod} makes sense and is being enthusiastically adopted by a large portion of the \em{baybayin}-using community; several subject matter experts use it in their work, such as Norman de los Santos and Kristian Kabuay.
 
 As far as I can tell, these are some of the reasons a \em{pamudpod} is preferred by many over the currently encoded \em{krus kudlit}:
-\eol\eol
+
 
 \subsection{The \em{pamudpod} is, indeed, native}
 
@@ -287,12 +288,12 @@ Transcription: \tagl1{ᜉᜒᜍ᜴ᜎᜐ᜴ ᜅ᜴ ᜐᜒᜎᜅᜈᜈ᜴\eol
 ᜎᜍᜏᜅ᜴ ᜁᜈᜓᜃᜒᜆ᜴ ᜐ ᜃᜑᜓᜌ᜴\eol
 ᜁᜐ᜴ᜉᜒᜍᜒᜆᜓ\eol
 ᜂᜇ᜴ᜈ}
-\eol\eol
+
 Tagalog: Perlas ng silanganan\eol
 Larawang inukit sa kahoy\eol
 Espiritu\eol
 Odna
-\eol\eol
+
 English: Pearl of the East\footnote{From \em{Lupang Hinirang}.}\eol
 Statues carved from wood\eol
 Spirit\eol
