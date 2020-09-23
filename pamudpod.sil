@@ -68,7 +68,7 @@ simpletable.init(SILE.documentState.documentClass, {
 \end{table}
 \texmode[_="%]
 \medskip
-\center{\font[size=18pt,weight=400]{14 August 2020}}
+\center{\font[size=18pt,weight=400]{23 September 2020}}
 \medskip
 \medskip
 \medskip
@@ -135,6 +135,8 @@ I further suggest that the \em{pamudpod} be added to \code{ScriptExtensions.txt}
 
 # Total code points: 1
 \end{verbatim}
+
+This is not the only way to solve the problem. I offer the alternative solution of a new character, should the UTC wish to avail of it, in \S Alternative solution.
 
 \eject\section{Why?}
 
@@ -329,5 +331,55 @@ As for Palawan scripts, there are emerging Tagbanwa variants from different Tagb
 \line
 
 In sum, right now, we only have evidence of the \em{pamudpod} being used in \em{surat Mangyan} and \em{baybayin}. The problems de los Santos mentions regarding the encoding of Buhid are a possible avenue of future work.
+
+\section{Alternative solution: new character}
+An earlier version of this document was assessed by the Script Ad Hoc, and I received several comments from Roozbeh Pournader. The most important was that the SAH members thought it'd be better to have a new character. I'd like to present several arguments against this. However, I prefer a new character to the current situation, so for completeness have provided details for one if this is the UTC's ultimate preference despite my concerns.
+
+My concerns can be classified in two broad categories:
+
+\subsection{Concerns about alternative solution}
+\subsection{Existing fonts}
+
+As stated in the \em{Disclosure} section, I do have a conflict in that one of these fonts is my fonts. However, I am certainly not alone in including U+1734 in my fonts which do not otherwise contain Hanuno'o letters. Two recent \em{baybayin} fonts by Norman de los Santos include a \em{pamudpod} as well at U+1734 with no other Hanuno'o letters having glyphs:
+
+\code{Baybayin_Loc.otf}
+
+\font[filename=./fonts/Baybayin_Loc.otf, size=32pt]{
+{ᜊ᜴}
+}
+
+\code{Baybayin_Doc.ttf}
+
+\font[filename=./fonts/Baybayin_Doc.ttf, size=32pt]{
+{ᜊ᜴}
+}
+
+\subsection{Existing documents}
+
+While there are not many documents that I know of which include the \em{pamudpod}, because of how long this situation has gone on, there are not zero. For example, the English Wikipedia as of the date of this document includes the \em{pamudpod} on its \em{baybayin} article encoded at U+1734.
+
+Furthermore, many tweets include it:
+
+\listarea{
+\listitem{ \BH{\href[src=https://twitter.com/search?q=\%E1\%9C\%8B\%E1\%9C\%B4&src=typed_query]{\tagl{ᜋ᜴ }}} }
+\listitem{ \BH{\href[src=https://twitter.com/search?q=\%E1\%9C\%83\%E1\%9C\%B4&src=typed_query]{\tagl{ᜃ᜴ }}} }
+\listitem{ \BH{\href[src=https://twitter.com/search?q=\%E1\%9C\%87\%E1\%9C\%B4&src=typed_query]{\tagl{ᜇ᜴ }}} }
+\listitem{ \ldots{}etc. }
+}
+
+\subsection{Possible new character's properties}
+
+Nevertheless, I do understand that since we're already going to be adding \font[features=+smcp]{Tagalog Letter Ra} and \font[features=+smcp]{Tagalog Letter Archaic Ra} the UTC might see fit to add another new character to the block. In that case I can provide a representative glyph and fill out a N4502-F for the concurrent ISO WG2 process.
+
+So:
+
+• \tagl{◌᜴}, U+1717, \font[features=+smcp]{Tagalog Sign Pamudpod}
+
+\begin{verbatim}
+1717;TAGALOG SIGN PAMUDPOD;Mc;0;L;;;;;N;;;;;
+\end{verbatim}
+
+If this is the avenue taken, I continue to recommend that U+1734 receive category \code{Mc}.
+
 "]
 \end{document}
