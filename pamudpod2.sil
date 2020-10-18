@@ -1,0 +1,125 @@
+\begin[class=book]{document}
+\define[command=tagl]{\font[size=1.8em,family=Noto Sans Tagalog Regular]{\process}}
+\define[command=tagl1]{\font[filename=./NotoSansTagalog-Regular.ttf]{\process}}
+\script[src=packages/texmode]
+\script[src=packages/image]
+\script[src=doc_packages/requirespace]
+\script{
+-- From sile-project/sile documentation/macros.xml
+local simpletable = SILE.require('doc_packages/simpletable')
+simpletable.init(SILE.documentState.documentClass, {
+  tableTag = 'table',
+  trTag = 'tr',
+  tdTag = 'td'
+})
+}
+\texmode[_="%]
+\script[src=doc_packages/features]
+\script[src=packages/frametricks]
+\script[src=packages/rotate]
+\script[src=packages/tate]
+\script[src=packages/rebox]
+\script[src=packages/linespacing]
+\script[src=packages/tableofcontents]
+\script[src=packages/pullquote]
+\script[src=packages/url]
+\script[src=doc_packages/simpletable]
+\script[src=doc_packages/lists]
+\script[src=doc_packages/unichar]
+\script[src=packages/pdf]
+\script[src=packages/raiselower]
+\script[src=packages/font-fallback]
+\script[src=packages/color]
+\script[src=packages/rules]
+\language[main=en]
+\define[command=book:chapter:post]{\thinspace\skip}
+\define[command=open-double-page]{\eject\noindent\par}
+\define[command=code]{\font[family=Latin Modern Mono]{\process}}
+% \process should be single \href
+\define[command=BH]{\color[color=#000099]{\process}}
+\set[parameter=font.family,value=EB Garamond,makedefault=true]
+\set[parameter=font.size,value=12,makedefault=true]
+\define[command=footnote:font]{\font[size=0.9em]{\set[parameter=document.baselineskip,value=0.5ex]\process\par}}
+\font:add-fallback[filename=./OpenBaybayin.otf,family=OpenBaybayin]
+\font:add-fallback[family=Noto Serif CJK JP]
+\define[command=SILE]{S\lower[height=0.5ex]{I}L\kern[width=-.2em]\raise[height=0.6ex]{\font[features=+smcp]{e}}}
+\define[command=mathfourtd]{\td{\font[family=MathJax_Size4]{\process}}}
+\typeset-into[frame=folio]{\begin[size=12pt]{font}\hfill This document was typeset with \SILE.\end{font}}
+\pdf:metadata[key=Title, val=Amended proposal to encode the Tagalog pamudpod]
+\par\center{\font[size=24pt,weight=1000]{Amended proposal to encode the Tagalog \em{pamudpod}}}
+\medskip
+\remove-font-feature[Letters=SmallCaps]
+\center{\font[size=18pt,weight=400]{Fredrick R. Brennan}}
+\medskip
+"]
+\begin{table}% ㇷ゚𛅦
+%BĒNG HOK LÊ
+\font[size=18pt,weight=400]{
+\tr{\mathfourtd{\glue[width=3.9cm]⎛}\td{\glue[width=5%pw]\tagl1{ᜉ᜴ᜟᜒ︀ᜇ᜴ ᜊ᜴ᜍᜒ︀ᜈ᜴ᜈᜈ᜴}}\mathfourtd{⎞}}
+\tr{\mathfourtd{\glue[width=3.9cm]\rebox[width=0pt]{⎜}\rebox[width=0pt]{\lower[height=5pt]{⎜}}\raise[height=6pt]{⎜}}\td{
+\raise[height=4pt]{
+\glue[width=2.30cm]Psih\glue[width=-0.25em]\raise[height=0.3em]{\unichar{0x0302}}\glue[width=0.25em]edelisto
+}
+}\mathfourtd{\rebox[width=0pt]{\lower[height=5pt]{⎟}}\raise[height=6pt]{⎟} }}
+\tr{\mathfourtd{\glue[width=3.9cm]\rebox[width=0pt]{⎜}\rebox[width=0pt]{\lower[height=5pt]{⎜}}\raise[height=6pt]{⎜}}\td{
+{\glue[width=0.55cm]\lower[height=2pt]フレッド・ブレンナン}
+}\mathfourtd{\rebox[width=0pt]{\lower[height=5pt]{⎟}}\raise[height=6pt]{⎟} }}
+\tr{\mathfourtd{\glue[width=3.9cm]⎝}\td{\font[family=TT2020Base,style=Italic]{copypaste}\font[family=Android Emoji]{📧}\font[family=TT2020Base,style=Italic]{kittens.ph}}\mathfourtd{⎠}}
+}
+\end{table}
+\texmode[_="%]
+\medskip
+\center{\font[size=18pt,weight=400]{3 October 2020}}
+\medskip
+\medskip
+\medskip
+\medskip
+\medskip
+\medskip
+\center{\font[size=24pt,weight=400]{\tagl{ᜊ᜴ᜃ᜴ᜇ᜴ᜄ᜴ᜑ᜴ᜎ᜴ᜋ᜴\\
+ᜈ᜴ᜅ᜴ᜉ᜴ᜍ᜴ᜐ᜴ᜆ᜴ᜏ᜴ᜌ᜴}}}
+\medskip
+\medskip
+\center{\font[size=24pt]{\font[size=1.6em,filename=./NotoSansTagalog-Bold.ttf]{ᜊ᜴ᜃ᜴ᜇ᜴ᜄ᜴ᜑ᜴ᜎ᜴ᜋ᜴\\
+ᜈ᜴ᜅ᜴ᜉ᜴ᜍ᜴ᜐ᜴ᜆ᜴ᜏ᜴ᜌ᜴}}}
+\nofolios\par\eject
+\chapter{Proposal}
+\section{Acknowledgements}
+\folios
+
+Thanks to Deborah Anderson, Roozbeh Pournader and all the other members of the Script Ad Hoc.
+
+\section{New character}
+After taking on board the advice of the Script Ad Hoc, I propose a new character be added:
+
+• \tagl{◌᜴}, U+1715, \font[features=+smcp]{Tagalog Sign Pamudpod}
+
+The name \em{pamudpod} is correct. It is a loanword from Hanuno'o into Tagalog and is spelled identically in both language. My new proposed character is confusable with U+1734.
+
+\subsection{Property info}
+
+\begin{verbatim}
+UnicodeData.txt: 1715;TAGALOG SIGN PAMUDPOD;Mc;9;L;;;;;N;;;;;
+
+IndicSyllabicCategory.txt: Pure_Killer
+
+IndicPositionalCategory.txt: Bottom_And_Right
+\end{verbatim}
+
+\subsection{Evidence}
+
+Evidence for my requested character can be found in \BH{\href[src=https://www.unicode.org/L2/L2020/20257-pamudpod.pdf]{L2/20-257}} in the Unicode Document Register.
+
+\section{\em{In re} U+1734}
+
+U+1734, the \font[features=+smcp]{Hanunoo Sign Pamudpod}, should have its class changed to \code{Mc} and receive the same Indic data. It should be marked confusable with U+1715.
+
+\section{New proposed paragraph for Unicode Standard}
+
+I propose the following be added to \P Punctuation of chapter 17 \S{}1 (Philippine Scripts) of The Unicode Standard:
+
+\begin{pullquote}
+\noindent{}Prior to Unicode 14.0, U+1734, \font[features=+smcp]{Hanunoo Sign Pamudpod} was being incorrectly used by some for both the Tagalog and Hanuno'o scripts. In response to this, U+1715 \font[features=+smcp]{Tagalog Sign Pamudpod} was encoded. In Tagalog texts which call for a \em{pamudpod}, U+1715 is to be used. In Hanuno'o texts, U+1734.
+\end{pullquote}
+"]
+\end{document}

@@ -3,7 +3,7 @@ SHELL = bash
 .SECONDARY:
 .SECONDEXPANSION:
 
-OUTPUTS = pamudpod.pdf
+OUTPUTS = pamudpod.pdf pamudpod2.pdf
 
 all: $(OUTPUTS)
 
